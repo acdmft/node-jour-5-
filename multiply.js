@@ -1,10 +1,8 @@
-function multiply(num) {
-    if (process.argv.length !== 3) {
-        console.log("Wrong number of arguments! Must be 1.");
-        return;
-    }
-    for (let i=1; i <= 10; i++) {
-        console.log(num * i);
-    }
+if (process.argv.length !== 3) {
+    console.log("Wrong number of arguments! Must be 1.");
+    return;
 }
-multiply(process.argv[2]);
+
+const {multiply, addition} = require("./table-utils");
+
+multiply(parseInt(process.argv[2]));
