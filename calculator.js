@@ -1,8 +1,6 @@
-function calculate() {
-    let args = process.argv;
-    if (args.length < 5 || args.length > 5) {
-        console.log("Error! Wrong number of arguments: (must be 3)!");
-        return;
+function calculate(num1, num2, op) {
+    if (op === undefined) {
+        return console.log("Error! Wrong number of arguments: (must be 3)!");
     }
     let num1 = parseInt(args[2]),
         num2 = parseInt(args[4]),
@@ -31,4 +29,4 @@ function calculate() {
             console.log("Not valid operator, could be '+-x/%'"); 
     }
 }
-calculate();
+calculate(process.argv[2], process.argv[3], process.argv[4]);
